@@ -22,11 +22,19 @@ body {
   /* padding: 0 1.5rem; */
   height: 100vh;
 }
-
+/* 
 .logo {
   font-size: 3rem;
   margin-bottom: 3rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
+} */
+
+.logo {
+  height: 2.5rem;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  /* padding: 1rem 1rem; */
 }
 
 .all-boards {
@@ -54,6 +62,21 @@ body {
   /* padding-right: 2rem; */
   margin-right: 2rem;
   padding-left: 1rem;
+}
+
+.navigation ul li p {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: grey;
+  font-weight: 600;
+}
+
+.link {
+  color: grey;
+}
+
+.active {
+  color: darkblue;
 }
 
 .activated {
@@ -104,4 +127,57 @@ body {
 .icon {
   font-size: 2rem;
   color: grey;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.column_item {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.column_item p {
+  font-size: 1.4rem;
+  color: grey;
+}
+
+.circle {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.items_heading {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.align-columns {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.new-column {
+  background-color: #bedaec40;
+  max-width: 40rem;
+  margin-top: 4.5rem;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-column p {
+  font-size: 1.6rem;
 }

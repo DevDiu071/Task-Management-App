@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { TbLayoutBoardSplit } from "react-icons/tb";
+import { useState } from "react";
 
 function SideBar() {
+  const [active, setActive] = useState();
+
   return (
     <div className="sidebar">
-      <h1 className="logo">TaskTrackr</h1>
+      <img src="/taskflow.png" alt="logo" className="logo" />
 
       <p className="all-boards">All Boards (8)</p>
       <nav className="navigation">
@@ -13,19 +16,31 @@ function SideBar() {
             <span className="icon">
               <TbLayoutBoardSplit />
             </span>
-            <NavLink to="/">Platform lunch</NavLink>
+            <NavLink className="link" to="/">
+              Platform lunch
+            </NavLink>
           </li>
           <li>
             <span className="icon">
               <TbLayoutBoardSplit />
             </span>
-            <NavLink to="/marketing">Marketing plan</NavLink>
+            <NavLink className="link" to="/marketing">
+              Marketing plan
+            </NavLink>
           </li>
           <li>
             <span className="icon">
               <TbLayoutBoardSplit />
             </span>
-            <NavLink to="/road_map">Road map</NavLink>
+            <NavLink className="link" to="/road_map">
+              Road map
+            </NavLink>
+          </li>
+          <li>
+            <span className="icon">
+              <TbLayoutBoardSplit />
+            </span>
+            <p>Create New Board</p>
           </li>
         </ul>
       </nav>
