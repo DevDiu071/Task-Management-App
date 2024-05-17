@@ -1,10 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { TbLayoutBoardSplit } from "react-icons/tb";
-import { useState } from "react";
 
 function SideBar() {
-  const [active, setActive] = useState();
-
   return (
     <div className="sidebar">
       <img src="/taskflow.png" alt="logo" className="logo" />
