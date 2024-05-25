@@ -4,19 +4,19 @@ import NewColumn from "../components/NewColumn";
 import { useTasks } from "../utilities/useTasks";
 
 function Platforms() {
-  const { count, columnTitle } = useTasks();
-  console.log(count);
+  const { count, columnTitle, columns } = useTasks();
+
   return (
     <div className="platforms">
       <Header />
       <div className="align-columns">
         <div className="columns">
-          {/* {Array.from({ length: count }, () => (
-            <Column />
-          ))} */}
-          {columnTitle.map((title) => (
-            <Column key={Math.random()} title={title} />
+          {columns.map((column) => (
+            <Column key={Math.random()} column={column} />
           ))}
+          {/* {columnTitle.map((title) => (
+            <Column key={Math.random()} title={title} />
+          ))} */}
         </div>
         <NewColumn />
       </div>

@@ -1,23 +1,27 @@
 import ColumnItem from "./ColumnItem";
 import PropTypes from "prop-types";
 
-function ColumnItems({ title }) {
+function ColumnItems({ column }) {
   return (
     <div>
       <div className="items_heading">
         <div className="circle"></div>
-        <p>{title} (15)</p>
+        <p>
+          {column.title} ({column.tasks.length})
+        </p>
       </div>
-      <ColumnItem>
-        <h2>Build UI for onboarding flow</h2>
-        <p>1 of 3 sub tasks</p>
-      </ColumnItem>
+      {column.tasks.map((task) => (
+        <ColumnItem key={Math.random()}>
+          <h2>{task.title}</h2>
+          <p>1 of {task.subtasks.length} sub tasks</p>
+        </ColumnItem>
+      ))}
     </div>
   );
 }
 
 ColumnItems.propTypes = {
-  title: PropTypes.string.isRequired,
+  column: PropTypes.object.isRequired,
 };
 
 export default ColumnItems;

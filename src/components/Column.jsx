@@ -1,10 +1,13 @@
+import { useTasks } from "../utilities/useTasks";
 import ColumnItems from "./ColumnItems";
 import PropTypes from "prop-types";
 
-function Column({ title }) {
+function Column({ column }) {
+  const { columnItems } = useTasks();
+
   return (
-    <div>
-      <ColumnItems title={title} />
+    <div className={`${columnItems.length > 0 ? "" : "column-empty"} column`}>
+      <ColumnItems column={column} />
     </div>
   );
 }

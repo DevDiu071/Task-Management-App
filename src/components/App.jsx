@@ -3,15 +3,15 @@ import AppLayout from "./AppLayout";
 import { useTasks } from "../utilities/useTasks";
 
 function App() {
-  const { modalIsOpen, setModalIsOpen } = useTasks();
+  const { filterOpen, closeFilterAndModal } = useTasks();
 
   return (
     <div>
       <BrowserRouter>
-        {modalIsOpen && (
+        {filterOpen && (
           <div
             className="background-blur"
-            onClick={() => setModalIsOpen(false)}
+            onClick={() => closeFilterAndModal()}
           ></div>
         )}
         <AppLayout />

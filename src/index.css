@@ -133,6 +133,25 @@ body {
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 5rem;
+  cursor: pointer;
+}
+
+.button-task {
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  background-color: #ffff74;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.button-create {
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  background-color: rgba(4, 4, 173, 0.646);
+  color: #fff;
+  cursor: pointer;
 }
 
 .all-boards {
@@ -152,6 +171,14 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
+}
+
+.column {
+  padding: 1rem;
+}
+
+.column-empty {
+  background-color: #8194a00e;
 }
 
 .column_item {
@@ -211,6 +238,58 @@ body {
   width: 40%;
   padding: 3rem;
   border-radius: 0.5rem;
+}
+
+.new-task-modal {
+  position: absolute;
+  z-index: 3;
+  top: 27.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 1.5rem 0.5rem #00000012;
+  width: 40%;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.new-task-modal div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.new-task-modal select {
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+.new-task-modal textarea {
+  padding: 1rem 1rem;
+  cursor: pointer;
+  resize: none;
+  background-color: rgba(211, 211, 211, 0.21);
+  border-radius: 0.3rem;
+}
+.new-task-modal textarea::placeholder {
+  color: rgba(128, 128, 128, 0.45);
+}
+.new-task-modal input::placeholder {
+  color: rgba(128, 128, 128, 0.45);
+}
+
+.new-task-modal input {
+  border: none;
+  background-color: rgba(211, 211, 211, 0.21);
+  padding: 0.8rem 1rem;
+  border-radius: 0.3rem;
+}
+
+.new-task-modal label {
+  font-size: 1.5rem;
+  color: rgb(88, 87, 87);
 }
 
 .modal p {
